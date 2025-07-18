@@ -93,3 +93,11 @@ body.dark .toggle-btn{
 body.dark .toggle-btn:hover{
     background: #666;
 }
+#particles-js{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
