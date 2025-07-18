@@ -103,3 +103,24 @@ body.dark .toggle-btn:hover{
     top: 0;
     left: 0;
 }
+body, .digit, .colon, .date, .toggle-btn {
+    transition: background 0.4s ease, color 0.4s ease;
+}
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+    50% {
+        transform: scale(1.1);
+        box-shadow: 0 0 10px rgba(20, 86, 229, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+}
+
+.toggle-btn.animate {
+    animation: pulse 0.4s ease;
+}
