@@ -46,17 +46,17 @@ function updateClock(){
 }
 setInterval(updateClock,1000);
 updateClock();
-function updateDate(){
+function updateDate() {
     const now = new Date();
-    const options = {weekday:"long",year:"numeric",month:"long",day:"numeric"};
-    const dateString = now.toLocaleDateString(undefined,options);
-    document.getElementById("date").textContent = dateString;
+    const options = { weekday: "long", year: "numeric", month: "long", day: "numeric" };
+    const dateString = now.toLocaleDateString(undefined, options);
+    document.getElementById("dateDisplay").textContent = dateString;
 }
 updateDate();
 const toggleBtn = document.getElementById("toggleTheme");
 toggleBtn.addEventListener("click",()=>{
     document.body.classList.toggle("dark");
-    toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️ Light Mode" : "🌙 Dark Mode";
+    toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
 particlesJS("particles-js", {
   particles: {
