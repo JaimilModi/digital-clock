@@ -54,10 +54,17 @@ function updateDate() {
 }
 updateDate();
 const toggleBtn = document.getElementById("toggleTheme");
-toggleBtn.addEventListener("click",()=>{
+
+toggleBtn.addEventListener("click", () => {
     document.body.classList.toggle("dark");
+
     toggleBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+
+    toggleBtn.classList.add("animate");
+
+    setTimeout(() => toggleBtn.classList.remove("animate"), 400);
 });
+
 particlesJS("particles-js", {
   particles: {
     number: {
